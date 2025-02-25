@@ -1,0 +1,30 @@
+{
+  "name": "shazly-mysql",
+  "version": "1.0.0",
+  "description": "To start mysql, in the terminal, type in `mysql -u root`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node ./node_modules/nodemon/bin/nodemon.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tancrescens/Shazly-mysql.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tancrescens/Shazly-mysql/issues"
+  },
+  "homepage": "https://github.com/tancrescens/Shazly-mysql#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "handlebars-helpers": "^0.10.0",
+    "hbs": "^4.2.0",
+    "mysql2": "^3.12.0",
+    "nodemon": "^3.1.9",
+    "wax-on": "^1.2.2"
+  }
+}

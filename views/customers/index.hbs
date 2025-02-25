@@ -1,0 +1,42 @@
+{{#extends "base"}}
+{{#block "content"}}
+<h1>Customers</h1>
+<h2>Search</h2>
+<form method="GET">
+    <div>
+        <label>First Name</label>
+        <input type="text" name="first_name" class="form-control" value="{{searchParams.first_name}}" />
+    </div>
+    <div>
+        <label>Last Name</label>
+        <input type="text" name="last_name" class="form-control" value="{{searchParams.last_name}}" />
+    </div>
+    <div>
+        <label>Rating</label>
+        <input type="text" name="rating" class="form-control" value="{{searchParams.rating}}" />
+    </div>
+    <input type="submit" value="Search" class="btn btn-primary btn-sm mt-3 mb-3" />
+</form>
+
+
+<table class="table">
+    <tr>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Rating</th>
+        <th>Company</th>
+        <th>Action</th>
+    </tr>
+    {{#each customers}}
+    <tr>
+        <td>{{first_name}}</td>
+        <td>{{last_name}}</td>
+        <td>{{rating}}</td>
+        <td>{{name}}</td>
+        <td><a href="/customers/{{customer_id}}/edit">Edit</a></td>
+        <td><a href="/customers/{{customer_id}}/delete">Delete</a></td>
+    </tr>
+    {{/each}}
+</table>
+{{/block}}
+{{/extends}}
